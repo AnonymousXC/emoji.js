@@ -26,6 +26,9 @@
 
 ![image](/.github/3.png)
 
+Demo 
+> https://anonymousxc.github.io/emoji.js/
+
 ## Pros
 
 - Many Options to tweak.
