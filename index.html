@@ -11,28 +11,23 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit-icons.min.js"></script>
 
-    <style>
-        html, body {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
 
-    <title>Document</title>
+    <title>Emoji JS</title>
 </head>
-<body>
+<body style="background-color: #040506;">
     
 
     <div class="uk-container uk-container-small uk-section">
         
         <div class="uk-margin-large">
-            <textarea name="" class="one uk-textarea uk-margin uk-height-medium">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</textarea>
-            <button class="first-btn uk-button uk-button-primary">Start picker</button>
+            <textarea name="" class="txt0 uk-textarea uk-margin uk-height-medium" style="background-color: #1a2028;color: #fff;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum est justo, iaculis vitae nulla at, pretium auctor mi. Donec varius ipsum sit amet ante porttitor, a malesuada nisi eleifend. Nullam a odio a augue cursus mattis. Mauris bibendum, leo sed cursus facilisis, mauris est blandit ligula, eu ultrices arcu ante id nibh. Aenean sed fringilla dolor, sed tempus massa. Sed cursus nisl at mauris venenatis varius. Nulla vitae purus nulla. Proin quam leo, imperdiet sit amet dapibus quis, commodo in neque.
+                Proin dictum leo vel dui elementum sollicitudin. Donec dictum quam a ultricies ultricies. Duis pharetra, sem ac blandit egestas, nunc dui porttitor neque, dictum venenatis eros lectus quis nisi. Praesent sit amet lorem vitae est semper rhoncus vel in felis. Vestibulum id dui ut eros faucibus blandit. Nunc porttitor odio nec magna vestibulum vestibulum. Nunc non est posuere, hendrerit metus id, euismod neque. Nam sit amet maximus augue, ultricies rhoncus ipsum. Etiam in leo sed libero tristique molestie vitae sit amet quam.</textarea>
+            <button class="btn1 uk-button uk-button-primary">Start picker</button>
         </div>
         
         <div>
-            <textarea name="" class="two uk-textarea uk-margin"></textarea>
-            <button class="second-btn uk-button uk-button-primary">Start picker</button>
+            <textarea name="" class="txt1 uk-textarea uk-margin" style="background-color: #1a2028;color: #fff;"></textarea>
+            <button id="btn2" class="second-btn uk-button uk-button-primary">Start picker</button>
         </div>
         
     </div>
@@ -45,12 +40,12 @@
         new EmojiPicker({
             trigger: [
                 {
-                    selector: '.first-btn',
-                    insertInto: ['.one', '.two'] //If there is only one '.selector', than it can be used without array
+                    selector: '.btn1',
+                    insertInto: ['.txt0', '.txt1'] //If there is only one '.selector', than it can be used without array
                 },
                 {
-                    selector: '.second-btn',
-                    insertInto: '.two'
+                    selector: '#btn2',
+                    insertInto: '.txt1'
                 }
             ],
             closeButton: true,
