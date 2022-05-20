@@ -40,3 +40,104 @@
 - I know non till now.
 
 # Documentation
+
+```
+new EmojiPicker({
+    trigger: [
+        {
+            selector: '.btn1',
+            insertInto: ['.txt0', '.txt1']
+        },
+        {
+            selector: '#btn2',
+            insertInto: '.txt1'
+        }
+    ],
+    closeButton: true,
+    dragButton: true,
+    width: 100,
+    height: 100,
+    addPosX: 100,
+    addPosY: -150,
+    tabbed: false,
+    navPos: "bottom",
+    navButtonReversed: false,
+    disableSearch: false,
+    hiddenScrollBar: true, // Not for Firefox
+    animation: true,
+    animationDuration: "1s",
+    // color: {
+            // pickerBackground: "#181818",
+            // searchBackground: "#202020",
+            // foreground: "#fff",
+            // navbarColor: "#000",
+            // iconHoverColor: "",
+            // borderColor: "",
+            // searchBackground: "",
+            // navbarColor: "",
+            // navButtonHoverBG: "",
+            // navButtonActiveBG: "",
+            // navSvgFill: "",
+            // closeMoveButtonColor: "",
+    // }
+    // navButtonSvg: {
+            // button1: "",
+            // button2: "",
+            // button3: "",
+            // button4: "",
+            // button5: "",
+            // button6: "",
+            // button7: "",
+            // button8: ""
+    // }
+    // addEmoji: {
+    //     pickerTab: "a",
+    //     customPickerTabIcon: "",
+    //     emoji: [
+    //         {
+    //             "emoji": "⚡",
+    //             "title": "electronic"
+    //         },
+    //         {
+    //             "emoji": "🚑",
+    //             "title": "car"
+    //         },
+    //     ]
+    // } && many more coming soon and available...
+});
+
+```
+
+
+
+- Trigger :- (Array) Take an array of objects. Each object having selector and insertInto property.
+
+- selector :- (String) Take a button's id or class to make it as a popup button.
+
+- insertInto :- (Array or string) Take an input's or textarea's id or class to insert emojies.
+
+- closeButton :- (Boolean) Hides or shows the close button.
+
+- dragButton :- (Boolean) Hides or shows the drag button.
+
+- width :- (Integer) Specifies width of picker.
+
+- height :- (Integer) Specifies height of picker.
+
+- addPosX :- (Integer) add the value to the X position of picker.
+
+- addPosY :- (Integer) add the value to the Y position of picker.
+
+- tabbed :- (Boolean) displays each section as tab, if true or as a single div.
+
+- navPos :- ("bottom" || "top") specifies position of the navigation bar.
+
+- navButtonReversed :- (Boolean) reverses order of buttons in nav bar.
+
+- disableSearch :- (Boolean) disables search bar.
+
+- hiddenScrollBar :- (Boolean) hides the scroll bar, if true, not for firefox.
+
+- animation :- (Boolean) controls to show or hide popup animation.
+
+- animationDuration :- (string) changes duration of popup animation, any css time compatible string.
