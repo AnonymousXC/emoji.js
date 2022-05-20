@@ -18,4 +18,25 @@
 <br>
 <br>
 
+## Output
+
+![image](/.github/1.png)
+
+![image](/.github/2.png)
+
+![image](/.github/3.png)
+
+## Pros
+
+- Many Options to tweak.
+- No external library required.
+- Only one file needed.
+- Premade CSS.
+- No need to write CSS (options to tweak colors).
+- Lightweight.
+- Cool...
+
+## Cons
+- I know non till now.
+
 # Documentation
