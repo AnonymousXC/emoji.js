@@ -68,7 +68,7 @@ new EmojiPicker({
     navButtonReversed: false,
     disableSearch: false,
     hiddenScrollBar: true, // Not for Firefox
-    animation: true,
+    animation: "slideDown",
     animationDuration: "1s",
     emojiDim: {
         emojiPerRow: 5,
@@ -148,7 +148,7 @@ new EmojiPicker({
 
 - hiddenScrollBar :- (Boolean) hides the scroll bar, if true, not for firefox.
 
-- animation :- (Boolean) controls to show or hide popup animation.
+- animation :- (String) takes popup, slideUp, slideDown, slideLeft, slideRight or fade.
 
 - animationDuration :- (string) changes duration of popup animation, any css time compatible string.
 

@@ -7561,7 +7561,7 @@ const EmojiPicker = function(options) {
                         z-index: 9999;
                         min-width: 370px;
                         min-height: 370px;
-                        ${this.options.animation ? `animation: popup ${this.options.animationDuration}`:""}
+                        ${this.options.animation ? `animation: ${this.options.animation} ${this.options.animationDuration}`:""}
                     }
 
                     .fg-emoji-container svg {
@@ -7744,6 +7744,31 @@ const EmojiPicker = function(options) {
                         from {transform: scale(0, 0);}
                         to {transform: scale(1, 1);}
                       }
+
+                    @keyframes slideUp {
+                        from {transform: translateY(50%); opacity:0}
+                        to {transform: translateY(0); opacity:1}
+                    }
+
+                    @keyframes slideDown {
+                        from {transform: translateY(-50%); opacity:0}
+                        to {transform: translateY(0%); opacity:1}
+                    }
+
+                    @keyframes slideLeft {
+                        from {transform: translateX(-50%); opacity:0}
+                        to {transform: translateX(0%); opacity:1}
+                    }
+
+                    @keyframes slideRight {
+                        from {transform: translateX(50%); opacity:0}
+                        to {transform: translateX(0%); opacity:1}
+                    }
+
+                    @keyframes fade {
+                        from {opacity:0}
+                        to {opacity:1}
+                    }
 
                     ${this.options.hiddenScrollBar ? `.fg-emoji-picker-category-wrapper::-webkit-scrollbar { width: 0px;}` : ""}
                     ${this.options.hiddenScrollBar ? `.fg-emoji-list::-webkit-scrollbar { width: 0px;}` : ""}
