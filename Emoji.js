@@ -9,6 +9,7 @@ const EmojiPicker = function(options) {
     this.options.color = this.options.color ? this.options.color : {};
     this.options.navButtonSvg = this.options.navButtonSvg ? this.options.navButtonSvg : {};
     this.options.addEmoji = this.options.addEmoji ? this.options.addEmoji : {};
+    this.options.emojiDim = this.options.emojiDim ? this.options.emojiDim : {};
     let emojiesHTML = '';
     let categoriesHTML = '';
     let emojiList = undefined;
@@ -7579,6 +7580,7 @@ const EmojiPicker = function(options) {
                         font-weight: bold;
                         flex: 0 0 calc(100% - 20px);
                         border-bottom: 1px solid var(--border-color);
+                        ${this.options.emojiDim.hideCategory ? "display: none" : ""};
                     }
 
                     .fg-emoji-nav {
@@ -7677,8 +7679,8 @@ const EmojiPicker = function(options) {
                         flex-wrap: wrap;
                         justify-content: center;
                         align-items: center;
-                        flex: 0 0 calc(100% / 6);
-                        height: 50px;
+                        flex: 0 0 calc(100% / ${this.options.emojiDim.emojiPerRow ? this.options.emojiDim.emojiPerRow : 6});
+                        height: ${this.options.emojiDim.emojiButtonHeight ? this.options.emojiDim.emojiButtonHeight : 50}px;
                         background-color: var(--icon-background);
                     }
 
@@ -7691,7 +7693,7 @@ const EmojiPicker = function(options) {
                         flex-wrap: wrap;
                         justify-content: center;
                         align-items: center;
-                        font-size: 23px;
+                        font-size: ${this.options.emojiDim.emojiSize ? this.options.emojiDim.emojiSize : 23}px;
                         background-color: var(--icon-background);
                         border-radius: 3px;
                         transition: all .3s ease;
@@ -7728,6 +7730,15 @@ const EmojiPicker = function(options) {
                         align-items: center;
                         justify-content: center;
                     }
+
+                    /* .triangle {
+                        
+                        position: relative;
+                        z-index: 6000;
+                        width: 50px !important;
+                        height: 50px !important;
+                        transform: rotate(180deg);
+                    } */
 
                     @keyframes popup {
                         from {transform: scale(0, 0);}
@@ -7823,18 +7834,15 @@ const EmojiPicker = function(options) {
                     </div>
 
                     <div>
-                        <!--<div class="fg-emoji-picker-loader-animation">
-                            <div class="spinner">
-                                <div class="bounce1"></div>
-                                <div class="bounce2"></div>
-                                <div class="bounce3"></div>
-                            </div>
-                        </div>-->
 
                         <ul class="fg-emoji-list">
                             ${emojiesHTML}
                         </ul>
                     </div>
+                    <!-- <div>  <svg class="triangle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 461.977 461.977" style="enable-background:new 0 0 461.977 461.977;" xml:space="preserve">
+                        <polygon points="50 15, 100 100, 0 100"/> 
+                        </svg>
+                    </div> -->
                 </div>
             `;
 

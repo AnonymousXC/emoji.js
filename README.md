@@ -55,17 +55,23 @@ new EmojiPicker({
     ],
     closeButton: true,
     dragButton: true,
-    width: 100,
-    height: 100,
-    addPosX: 100,
-    addPosY: -150,
-    tabbed: false,
+    width: 350,
+    height: 370,
+    addPosX: -130,
+    addPosY: -380,
+    tabbed: true,
     navPos: "bottom",
     navButtonReversed: false,
     disableSearch: false,
     hiddenScrollBar: true, // Not for Firefox
     animation: true,
     animationDuration: "1s",
+    emojiDim: {
+        emojiPerRow: 5,
+        emojiSize: 30,
+        emojiButtonHeight: 80,
+        hideCategory: false
+    },
     // color: {
             // pickerBackground: "#181818",
             // searchBackground: "#202020",
@@ -88,11 +94,11 @@ new EmojiPicker({
             // button5: "",
             // button6: "",
             // button7: "",
-            // button8: ""
+            // button8: ``
     // }
     // addEmoji: {
     //     pickerTab: "a",
-    //     customPickerTabIcon: "",
+    //     customPickerTabIcon: ``,
     //     emoji: [
     //         {
     //             "emoji": "⚡",
@@ -112,9 +118,9 @@ new EmojiPicker({
 
 - Trigger :- (Array) Take an array of objects. Each object having selector and insertInto property.
 
-- selector :- (String) Take a button's id or class to make it as a popup button.
+    - selector :- (String) Take a button's id or class to make it as a popup button.
 
-- insertInto :- (Array or string) Take an input's or textarea's id or class to insert emojies.
+    - insertInto :- (Array or string) Take an input's or textarea's id or class to insert emojies.
 
 - closeButton :- (Boolean) Hides or shows the close button.
 
@@ -141,3 +147,13 @@ new EmojiPicker({
 - animation :- (Boolean) controls to show or hide popup animation.
 
 - animationDuration :- (string) changes duration of popup animation, any css time compatible string.
+
+- emojiDim :- (Object) sets dimensions of emoji and related things.
+
+    - emojiPerRow :- (Integer) defines how many in a row.
+
+    - emojiSize :- (Integer) the size of emojies.
+
+    - emojiButtonHeight :- (Integer) the height of emoji button.
+
+    - hideCategory :- (Boolean) shows/hides the title of section.
