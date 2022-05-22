@@ -26,6 +26,9 @@
 
 ![image](/.github/3.png)
 
+Demo 
+> https://anonymousxc.github.io/emoji.js/
+
 ## Pros
 
 - Many Options to tweak.
@@ -147,6 +150,7 @@ new EmojiPicker({
 - animation :- (Boolean) controls to show or hide popup animation.
 
 - animationDuration :- (string) changes duration of popup animation, any css time compatible string.
+<<<<<<< HEAD
 
 - emojiDim :- (Object) sets dimensions of emoji and related things.
 
@@ -157,3 +161,5 @@ new EmojiPicker({
     - emojiButtonHeight :- (Integer) the height of emoji button.
 
     - hideCategory :- (Boolean) shows/hides the title of section.
+=======
+>>>>>>> origin/main
