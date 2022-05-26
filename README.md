@@ -161,3 +161,10 @@ new EmojiPicker({
     - emojiButtonHeight :- (Integer) the height of emoji button.
 
     - hideCategory :- (Boolean) shows/hides the title of section.
+
+## About Developer
+Hi,
+
+I am a 15 years old game, app and web developer. I started coding two years ago. Being bored by playing game all the time, One Day I thought to make games. 
+
+[Check More Here](https://github.com/AnonymousXC)
