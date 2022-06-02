@@ -26,6 +26,8 @@
 
 ![image](/.github/3.png)
 
+![image](/.github/4.png)
+
 Demo 
 > https://anonymousxc.github.io/emoji.js/
 
@@ -45,7 +47,7 @@ Demo
 
 # Documentation
 
-```
+```javascript
 new EmojiPicker({
     trigger: [
         {
@@ -70,6 +72,7 @@ new EmojiPicker({
     hiddenScrollBar: true, // Not for Firefox
     animation: "slideDown",
     animationDuration: "1s",
+    disableNav: false,
     emojiDim: {
         emojiPerRow: 5,
         emojiSize: 30,
@@ -150,7 +153,9 @@ new EmojiPicker({
 
 - animation :- (String) takes popup, slideUp, slideDown, slideLeft, slideRight or fade.
 
-- animationDuration :- (string) changes duration of popup animation, any css time compatible string.
+- animationDuration :- (String) changes duration of popup animation, any css time compatible string.
+
+- disableNav :- (Boolean) hides the navigation bar.
 
 - emojiDim :- (Object) sets dimensions of emoji and related things.
 

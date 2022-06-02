@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="FlImUzKfM9FIzyoiutsHJe08pP08nko9rkesYHEB09U" />
+    <meta name="robots" content="all" />
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/css/uikit.min.css" />
 
@@ -16,7 +17,6 @@
     <title>Emoji JS</title>
 </head>
 <body style="background-color: #040506;">
-    
 
     <div class="uk-container uk-container-small uk-section">
         
@@ -55,18 +55,19 @@
             height: 370,
             addPosX: -130,
             addPosY: -380,
-            tabbed: true,
+            tabbed: false,
             navPos: "bottom",
             navButtonReversed: false,
             disableSearch: false,
             hiddenScrollBar: true, // Not for Firefox
             animation: "slideDown",
             animationDuration: "1s",
+            disableNav: false,
             emojiDim: {
                 emojiPerRow: 5,
                 emojiSize: 30,
                 emojiButtonHeight: 80,
-                hideCategory: false
+                hideCategory: true
             },
             // color: {
                     // pickerBackground: "#181818",

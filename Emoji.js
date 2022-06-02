@@ -7548,6 +7548,7 @@ const EmojiPicker = function(options) {
                         --nav-button-active: ${this.options.color.navButtonActiveBG ? this.options.color.navButtonActiveBG : "#e9ebf1"};
                         --nav-Svg-fill: ${this.options.color.navSvgFill ? this.options.color.navSvgFill : "white"}
                     }
+
                     .fg-emoji-container {
                         position: fixed;
                         top: 0;
@@ -7561,7 +7562,7 @@ const EmojiPicker = function(options) {
                         z-index: 9999;
                         min-width: 370px;
                         min-height: 370px;
-                        ${this.options.animation ? `animation: ${this.options.animation} ${this.options.animationDuration}`:""}
+                        ${this.options.animation ? `animation: ${this.options.animation} ${this.options.animationDuration}`:""};
                     }
 
                     .fg-emoji-container svg {
@@ -7586,6 +7587,7 @@ const EmojiPicker = function(options) {
                     .fg-emoji-nav {
                         background-color: var(--nav-background);
                         ${this.options.navPos == "bottom" ? `position: absolute; bottom: -1px; width: 100%;` : ""}
+                        ${this.options.disableNav === true ? `display:none;` : ""}
                     }
 
                     .fg-emoji-nav li a svg {
@@ -7654,7 +7656,7 @@ const EmojiPicker = function(options) {
                         padding: 0;
                         overflow-y: ${this.options.tabbed ? "hidden" : "visible"};
                         overflow-x: hidden;
-                        height: ${pickerHeight - (this.options.disableSearch ? 41 : 77)}px;
+                        height: ${pickerHeight - (this.options.disableSearch ? 41 : 77) + (this.options.disableNav ? 41 : 0)}px;
                         position: fixed;
                         width: ${pickerWidth}px;
                         min-width: 370px;
@@ -7706,7 +7708,9 @@ const EmojiPicker = function(options) {
                     .fg-emoji-picker-search {
                         position: relative;
                         ${this.options.navPos == "bottom" ? `position: absolute; bottom: 40px; width: 100%;` : ""}
-                        display: ${this.options.disableSearch ? "none" : "block"}
+                        display: ${this.options.disableSearch ? "none" : "block"};
+                        z-index: 100;
+                        ${this.options.disableNav === true ? this.options.navPos === "bottom" ?  "bottom: 0" : "" : ""};
                     }
 
                     .fg-emoji-picker-search input {
@@ -7731,14 +7735,17 @@ const EmojiPicker = function(options) {
                         justify-content: center;
                     }
 
-                    /* .triangle {
-                        
-                        position: relative;
-                        z-index: 6000;
-                        width: 50px !important;
-                        height: 50px !important;
-                        transform: rotate(180deg);
-                    } */
+                    .fg-triangle {
+                        width: 0;
+                        height: 0;
+                        border: 20px solid transparent;
+                        border-top: 0;
+                        border-bottom: 40px solid var(--icon-background);
+                        z-index: -100;
+                        position: absolute;
+                        transform: rotateX(180deg);
+                        bottom: -20px;
+                    }
 
                     @keyframes popup {
                         from {transform: scale(0, 0);}
@@ -7864,10 +7871,6 @@ const EmojiPicker = function(options) {
                             ${emojiesHTML}
                         </ul>
                     </div>
-                    <!-- <div>  <svg class="triangle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 461.977 461.977" style="enable-background:new 0 0 461.977 461.977;" xml:space="preserve">
-                        <polygon points="50 15, 100 100, 0 100"/> 
-                        </svg>
-                    </div> -->
                 </div>
             `;
 
