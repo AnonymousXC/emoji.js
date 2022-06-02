@@ -17,6 +17,10 @@ const EmojiPicker = function(options) {
     const pickerWidth =  this.options.width ? this.options.closeButton ?  this.options.width + 20 : this.options.width : 370;
     const pickerHeight =  this.options.height && this.options.height > 370 ? this.options.height : 370;
 
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+        this.options.disableNav = true
+    }
 
     this.lib = function(el = undefined) {
 
@@ -7782,10 +7786,21 @@ const EmojiPicker = function(options) {
                     ${this.options.hiddenScrollBar ? `.fg-emoji-picker-category-wrapper::-webkit-scrollbar { width: 0px;}` : ""}
                     ${this.options.hiddenScrollBar ? `.fg-emoji-list::-webkit-scrollbar { width: 0px;}` : ""}
 
-                    @media only screen and (max-width: 400px) {
+                    @media only screen and (max-width: 390px) {
                         .fg-emoji-container {
+                            transition: none;
                             left: 50% !important;
                             transform: translateX(-50%) !important;
+                            min-width: 0px;
+                            min-height: 0px;
+                            max-width: 93vw;
+                            max-height: 100vh;
+                        }
+                        .fg-emoji-list li {
+                            flex: 0 0 calc(93vw / 3)
+                        }
+                        .fg-emoji-list li:nth-child(3n):not(2) {
+                            break-after: always;
                         }
                     }
 
