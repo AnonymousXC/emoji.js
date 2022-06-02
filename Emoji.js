@@ -7562,6 +7562,8 @@ const EmojiPicker = function(options) {
                         z-index: 9999;
                         min-width: 370px;
                         min-height: 370px;
+                        max-width: 95vw;
+                        max-height: 95vh;
                         ${this.options.animation ? `animation: ${this.options.animation} ${this.options.animationDuration}`:""};
                     }
 
@@ -7780,6 +7782,13 @@ const EmojiPicker = function(options) {
                     ${this.options.hiddenScrollBar ? `.fg-emoji-picker-category-wrapper::-webkit-scrollbar { width: 0px;}` : ""}
                     ${this.options.hiddenScrollBar ? `.fg-emoji-list::-webkit-scrollbar { width: 0px;}` : ""}
 
+                    @media only screen and (max-width: 400px) {
+                        .fg-emoji-container {
+                            left: 50% !important;
+                            transform: translateX(-50%) !important;
+                        }
+                    }
+
                 </style>
             `;
 
@@ -7797,6 +7806,9 @@ const EmojiPicker = function(options) {
 
             obj.left            = clickPosX;
             obj.top             = clickPosY;
+
+            if(obj.left < 0)
+                obj.left = 10
 
 
             return obj;
