@@ -7661,6 +7661,7 @@ const EmojiPicker = function(options) {
                         margin: 0;
                         padding: 0;
                         overflow-y: ${this.options.tabbed ? "hidden" : "visible"};
+                        
                         overflow-x: hidden;
                         height: ${pickerHeight - (this.options.disableSearch ? 41 : 77) + (this.options.disableNav ? 41 : 0)}px;
                         position: fixed;
@@ -7785,6 +7786,7 @@ const EmojiPicker = function(options) {
 
                     ${this.options.hiddenScrollBar ? `.fg-emoji-picker-category-wrapper::-webkit-scrollbar { width: 0px;}` : ""}
                     ${this.options.hiddenScrollBar ? `.fg-emoji-list::-webkit-scrollbar { width: 0px;}` : ""}
+                    ${this.options.hiddenScrollBar ? `.fg-emoji-list { scrollbar-width: none;}` : ""}
 
                     @media only screen and (max-width: 390px) {
                         .fg-emoji-container {

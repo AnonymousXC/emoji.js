@@ -69,7 +69,7 @@ new EmojiPicker({
     navPos: "bottom",
     navButtonReversed: false,
     disableSearch: false,
-    hiddenScrollBar: true, // Not for Firefox
+    hiddenScrollBar: true,
     animation: "slideDown",
     animationDuration: "1s",
     disableNav: false,
